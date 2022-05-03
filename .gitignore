@@ -1,0 +1,5 @@
+**__pycache__**
+/flask-app/bin/
+/flask-app/lib/
+/flask-app/include/
+**pyvenv.cfg**
