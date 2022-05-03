@@ -23,10 +23,9 @@ curl http://$(oc get route -n ex288-practice flask-practice -ojsonpath='{..host}
 
 ### 2. Set the application environment
 
-### 4. Health check
+### 3. Health check
 
-### 3.  Custom s2i build
+### 4.  Set post-commit build hook
 
+### 5. Expose the registry and redeploy the application 
 
-
-### 5. 
