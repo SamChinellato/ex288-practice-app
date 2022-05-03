@@ -29,3 +29,7 @@ def read_configmap():
 @app.route("/filereader")
 def read_file():
     return jsonify(file_lines)
+
+@app.route("/flask-healthz")
+def return_healthy():
+    return "application healthy", 200
