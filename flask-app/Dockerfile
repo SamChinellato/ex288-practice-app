@@ -13,6 +13,8 @@ RUN chown -R flask:flask /app
 
 RUN chmod -R 700 /app
 
+USER flask
+
 EXPOSE 5000
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
