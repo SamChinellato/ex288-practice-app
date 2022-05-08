@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/python-38
+FROM docker.io/python:3.9
 
 WORKDIR /app
 
@@ -6,6 +6,12 @@ COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
 COPY . .
+
+RUN useradd flask 
+
+RUN chown -R flask:flask /app
+
+RUN chmod -R 700 /app
 
 EXPOSE 5000
 
