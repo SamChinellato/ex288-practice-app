@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 file_lines = []
-file_path = './files/readme.txt'
+file_path = './readme.txt'
 if os.path.exists(file_path):
     with open('./files/readme.txt', 'r') as file:
         for line in file.readlines():
