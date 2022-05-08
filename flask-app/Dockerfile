@@ -9,11 +9,11 @@ COPY . .
 
 RUN useradd flask 
 
-RUN chown -R 0 /app
+RUN chown -R flask:flask /app
 
-RUN chmod -R g=u /app
+RUN chmod -R 700 /app
 
-USER 1001
+USER flask
 
 EXPOSE 5000
 
