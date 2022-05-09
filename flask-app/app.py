@@ -26,10 +26,6 @@ def hello_world():
 def read_configmap():
     return "<p>It's {} today, unusually for {} the weather is {}</p>".format(week_day, weather_month, weather)
 
-@app.route("/filereader")
-def read_file():
-    return jsonify(file_lines)
-
 @app.route("/flask-healthz")
 def return_healthy():
     return "application healthy", 200
