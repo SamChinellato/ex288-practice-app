@@ -4,16 +4,6 @@ import os
 app = Flask(__name__)
 
 
-file_lines = []
-file_path = './readme.txt'
-if os.path.exists(file_path):
-    with open('./files/readme.txt', 'r') as file:
-        for line in file.readlines():
-            file_lines.append(line)
-else:
-    file_lines.append("Could not find {}".format(file_path))
-
-
 week_day = os.getenv("WEEK_DAY", "DEFAULT_WEEK")
 weather_month = os.getenv("WEATHER_MONTH", "DEFAULT_MONTH")
 weather = os.getenv("WEATHER", "DEFAULT_WEATHER")
