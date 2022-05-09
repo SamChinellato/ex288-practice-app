@@ -9,9 +9,11 @@ COPY . .
 
 RUN useradd flask 
 
-RUN chown -R flask:flask /app
+RUN chown -R 0 /app
 
-RUN chmod -R 700 /app
+RUN chmod -R g=u /app
+
+RUN chgrp -R 0 /app
 
 USER flask
 
