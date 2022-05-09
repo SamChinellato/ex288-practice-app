@@ -7,15 +7,11 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-RUN useradd flask 
-
-RUN chown -R 0 /app
-
 RUN chmod -R g=u /app
 
 RUN chgrp -R 0 /app
 
-USER flask
+USER 1001
 
 EXPOSE 5000
 
